@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="http://search.naver.com/search.naver">
+  일반 텍스트 입력 : <input type="text" name="query" value="입력된 텍스트가 여기에 들어갑니다."> <br>
+  비밀번호 등 히든 : <input type="password" placeholder="입력 가이드가 여기에 작성됩니다"> <br>
+  이메일 포멧 입력 : <input type="email" placeholder="이메일 형식 입력">
+
+  <!-- Form 에 넣을 수 있는 input에 종류 -->
+  <!-- checkbox, radio, number, range, file -->
+  <h4>체크박스 옵션</h4>
+  <input type="checkbox" name="game" value="로스트아크"><br>
+  <input type="checkbox" name="game" value="동물의 숲"><br>
+  <input type="checkbox" name="game" value="포켓몬스터"><br>
+  <input type="checkbox" name="game" value="LOL"><br>
+
+  <h4>라디오 옵션</h4>
+  <input type="radio" name="sports" value="boxing">복싱<br>
+  <input type="radio" name="sports" value="soccer">축구<br>
+  <input type="radio" name="sports" value="baseball">야구<br>
+  <input type="radio" name="sports" value="handball">핸드볼<br>
+
+  <h4>숫자 필드</h4>
+  수량을 입력하세요(1) <input type="number" min="1" max="100" value="5"><br>
+  수량을 입력하세요(2) <input type="range" min="1" max="100" value="5"><br>
+
+  <h4>파일 업로드</h4>
+  <label for="imageup">이미지 업로드: </label>
+  <input type="file" name="imageup" accept="image/*"><br>
+
+  <h4>SELECT 태그로 드롭다운</h4>
+  <label for="food">음식 선택</label>
+  <select name="food" id="food">
+    <option value="donburi">덮밥</option>
+    <option value="sushi">초밥</option>
+    <option value="pasta">파스타</option>
+    <option value="donkatsu">돈까스</option>
+    <option value="porkbarbecue">제육</option>
+  </select>
+
+  <label for="textarea"></label>
+  <textarea id="textarea" name="query" placeholder="여기에 많은 양의 텍스트를 넣을 수 있습니다."></textarea>
+
+  <input type="hidden"
+         name="query"
+         value="이 인풋은 아무한테도 안알려줘야지...! 아무도 모르겠지? 이런걸 제출하는지?"><br>
+  
+  <br><br><br>
+  <button>제출버튼</button>
+  <button type="reset">초기화 버튼</button>
+</form>
+</body>
+</html>
