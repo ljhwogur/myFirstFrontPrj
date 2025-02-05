@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>테두리와 박스크기</title>
+  <style>
+      .box {
+          margin: 10px;
+          padding: 10px;
+          width: 400px;
+          height: 400px;
+          background: lightcoral;
+      }
+
+      .box:first-child {
+          border: 10px dotted black;
+      }
+
+      .box:last-child {
+          border: 10px dotted black;
+          box-sizing: border-box; /* 내부 콘텐츠 영역이 감소하는 방식으로, 정해진 사이즈 엄수 */
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="box">박스1</div>
+  <div class="box">박스2</div>
+</div>
+</body>
+</html>
