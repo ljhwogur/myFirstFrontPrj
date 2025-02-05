@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>조합선택자</title>
+<!--    여러개의 선택자를 붙여서 선언-->
+<!--    선택자가 여러 개 조합되며 디테일해지는 경우, 선택 실패, 무효한 선택자 발생 가능-->
+<!--    미리 클래스나 속성이 여러가지 특정한 시각화 요구사항으로 정해져있는 경우에는 무효한 선택자도 미리 선언할 필요가 있다-->
+    <style>
+        /*id 선택자는 숫자로만 지정하면 안됨*/
+        #b.important1{ /*무효한 선택자 미리 정의할 필요 있음*/
+            color : red;
+        }
+        #d.important2{
+            color : blue;
+        }
+
+        .important1[special="true"]{
+            color: skyblue;
+            font-weight: bold;
+        }
+
+        .important2.even { /* 조합 선택자는 & 조건으로 작용한다 */
+            color: green;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<!--ul>li#$.[special=""]{$번째 아이템입니다}*10 -->
+<ul>
+    <li id = "a" special = "true">1번째 아이템입니다</li>
+    <li id = "b" class = "important1 even">2번째 아이템입니다</li>
+    <li id = "c" special = "true">3번째 아이템입니다</li>
+    <li id = "d" class = "important2 even" special="true">4번째 아이템입니다</li>
+    <li id = "e" special = "true">5번째 아이템입니다</li>
+    <li id = "f" class = "important1 even" special="true">6번째 아이템입니다</li>
+    <li id = "g" special = "true">7번째 아이템입니다</li>
+    <li id = "h" class = "important2 even">8번째 아이템입니다</li>
+    <li id = "i" special = "true">9번째 아이템입니다</li>
+    <li id = "j" class = "important1 even">10번째 아이템입니다</li>
+</ul>
+
+</body>
+</html>

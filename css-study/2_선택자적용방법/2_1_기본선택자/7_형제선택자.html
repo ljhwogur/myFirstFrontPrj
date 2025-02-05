@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>후손 선택자</title>
+  <style>
+    span + li {
+        /* + : 바로 다음 형제*/
+        text-decoration: underline;
+    }
+
+    span ~ li {
+        /* ~ : 다음의 모든 형제*/
+        font-weight: bold;
+    }
+
+    .important ~ li {
+        color: deepskyblue;
+    }
+
+   </style>
+</head>
+<body>
+<main>
+  <div>
+<span>main>div>span 영역</span>
+<ul>
+    <span>스팬태그</span>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+</ul>
+</div>
+<h4>
+  main>h4 영역
+</h4>
+<ul>
+  <li class="important">리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+</ul>
+</main>
+</body>
+</html>

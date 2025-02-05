@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>우선순위</title>
+  <style>
+      /* 동일 점수 선택자 간에만 덮어쓰기 효과가 일어남! */
+
+      div:nth-child(8) {
+          background: firebrick !important;
+      }
+
+      /* important 선언은 1000 + @ */
+      #id8 { /* important 간에는 1000 점 미만에서 점수 합산이 높은 선언이 이김 */
+          background: darkcyan !important;
+      }
+
+      /* 아이디 선택자 : 100점 */
+      #id7, #id9 {
+          background: white;
+      }
+
+      div.class3, div.class7 { /* 11점  */
+          background: midnightblue;
+      }
+
+      /*  클래스 선택자 : 10점  */
+      .class1, .class3, .class5 {
+          background-color: lightblue;
+      }
+
+      /* 조합형/관계형 선택자 : 산술적 가산 */
+      body > div { /* 2점 */
+          background-color: lightcoral;
+      }
+
+      /* 태그 선택자 : 1점 */
+      div {
+          background-color: red;
+      }
+
+  </style>
+</head>
+<body>
+<div id="id1" class="class1">1번째항목</div>
+<div id="id2" class="class2">2번째항목</div>
+<div id="id3" class="class3">3번째항목</div>
+<div id="id4" class="class4">4번째항목</div>
+<div id="id5" class="class5">5번째항목</div>
+<div id="id6" class="class6">6번째항목</div>
+<div id="id7" class="class7">7번째항목</div>
+<div id="id8" class="class8">8번째항목</div>
+<div id="id9" class="class9">9번째항목</div>
+</body>
+</html>

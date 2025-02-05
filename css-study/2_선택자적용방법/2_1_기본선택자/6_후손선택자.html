@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>후손 선택자</title>
+  <style>
+    /*느슨한 포함관계에서 사용*/
+   main li {
+     color: blue;
+   }
+   div li {
+     color: deepskyblue;
+   }
+
+   ul li {
+     color: skyblue;
+   }
+   /*선언된 순서로 마지막에 적용된 내용이 항상 그 전의 내용을 덮어씀*/
+   /*우선순위 판단의 경우 상속 점수 계산을 통해 정확히 다룸*/
+   </style>
+</head>
+<body>
+<main>
+  <div>
+<span>main>div>span 영역</span>
+<ul>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+</ul>
+</div>
+<h4>
+  main>h4 영역
+</h4>
+<ul>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+  <li>리스트 항목입니다</li>
+</ul>
+</main>
+</body>
+</html>

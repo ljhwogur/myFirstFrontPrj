@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2. 내부스타일</title>
+    <!--현재 문서에 대해서 분리된 시각적 표현 지시 가능(하지만 글로벌 세팅에 영향받음)-->
+    <!--HTML 문법과 CSS 문법이 한단계 분리됨-->
+    <style>
+        /*여기에 css 문법을 분리해서 작성 가능*/
+        ul {
+            color : darkblue;
+            background : deepskyblue;
+        }
+
+        ul > li {
+            color : darkred;
+        }
+    </style>
+</head>
+<body>
+<h3>좋아하는 과일</h3>
+<ul>
+    <li>사과</li>
+    <li>복숭아</li>
+    <li>귤</li>
+    <li>딸기</li>
+    <li>자두</li>
+</ul>
+</body>
+</html>

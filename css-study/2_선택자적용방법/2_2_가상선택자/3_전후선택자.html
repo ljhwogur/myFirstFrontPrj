@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>전후선택자</title>
+  <style>
+      li.interested::before {
+          content: "관심 항목의 앞 위치 입니다.";
+          /* content는 엘리먼트로 DOM 에 포함되지 않고 시각적 효과로만 존재 */
+          /* 앞 요소(element) 를 선택하는 CSS 선택자는 없습니다. */
+          font-weight: bold;
+      }
+
+      li.interested::after {
+          content: "관심 항목의 \A\3C뒤\3E 위치 입니다";
+          /* 유니코드 문자로 이스케이프된 기호 삽입 가능하다 */
+          color: blue;
+          white-space: pre;
+      }
+  </style>
+</head>
+<body>
+<ul>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li class="interested">매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+  <li>매우많은아이템</li>
+</ul>
+</body>
+</html>
