@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Depth 제어 (Z-index)</title>
+  <style>
+    .box {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+    }
+
+    .box1, .box3, .box5 {
+        background-color: lightcoral;
+    }
+
+    .box3 {
+        margin-left: 200px;
+        z-index: 2;
+    }
+
+    .box1 {
+        margin-left: 300px;
+        margin-top: 100px;
+        background-color: cornflowerblue;
+        z-index: 3;
+        /*  z-index 숫자가 커질 수록 위로  */
+    }
+
+    .box4 {
+        background-color: lightblue;
+        margin: 100px;
+        z-index: 1;
+        /*  z-index 동일하면 후속 요소가 앞선 요소를 덮음  */
+    }
+
+    .box2 {
+        background-color: firebrick;
+        margin-left: 400px;
+        z-index: -1;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="box box1">박스1</div>
+  <div class="box box2">박스2</div>
+  <div class="box box3">박스3</div>
+  <div class="box box4">박스4</div>
+  <div class="box box5">박스5</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition : 전환과 변환</title>
+  <style>
+      transition-box {
+          width: 200px;
+          height: 200px;
+          background-color: cornflowerblue;
+          margin: 10px;
+          text-align: center;
+          line-height: 200px;
+
+          transition-property: borde-radius, background-color, width;
+          transition-timing-function: steps(10), ease-in, linear;
+          transition-duration: 10s;
+          /* 전환동작 duration timing functuon delay */
+          /*transition: all 5s ease-in 0s;*/
+      }
+
+      /* 상태 선택자 -> 상태의 전환 */
+      /* 전환시에 어떤 효과를 적용할 것 인가? */
+      .transition-box:hover {
+          border-radius: 50%;
+          background-color: lightblue;
+          width: 1000px;
+      }
+
+      /*  상태 변화가 동작의 트리거 조긴 됨  */
+      .transform-box1:hover {
+          /* 전환된 상태 정의 x */
+          /* 동작할 내용 정의 o*/
+
+          /*transform: rotate3d(x,y,z, deg);*/
+          transform: rotate3d(10, 0, 0, 100deg);
+      }
+
+      .transform-box:hover {
+
+      }
+
+      .transform-box:hover {
+
+      }
+
+      .transform-box:hover {
+
+      }
+
+      .transform-box:hover {
+
+      }
+  </style>
+</head>
+<body>
+<div class="transition-box"></div>
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+<div class="box4">4</div>
+<div class="box5">5</div>
+</body>
+</html>
