@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #7d9dfd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+}
+
+.panel {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.pricing-plan {
+    background: white;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.pricing-plan:not(:last-child) {
+    border-right: 1px solid #f4f4f4;
+}
+
+.pricing-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pricing-header {
+    font-size: 1.5em;
+    color: #777777;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-features-item {
+    margin: 10px 20px 10px 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #f4f4f4;
+    color: #7d9dfd;
+}
+
+.pricing-features-item:first-child {
+    border-top: 1px solid #f4f4f4;
+}
+
+.pricing-price {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #7d9dfd;
+    margin: 15px 0;
+}
+
+.pricing-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #7d9dfd;
+    border: 2px solid #7d9dfd;
+    transition: all 0.3s ease;
+}
+
+.pricing-button:hover {
+    background: #7d9dfd;
+    color: white;
+}
+
+/* 화면이 크기가 900px 이하(0~900pX) 일때 (모바일) */
+@media (max-width: 899px) {
+    .panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-plan {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+}
