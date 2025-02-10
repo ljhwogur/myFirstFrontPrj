@@ -7,7 +7,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    /*height: 100vh;*/
+    height: 100vh;
 }
 
 .panel {
@@ -97,6 +97,10 @@ body {
     .pricing-plan {
         width: 90%;
         margin-bottom: 20px;
+    }
+
+    body {
+        height: 100%;
     }
 
 }
